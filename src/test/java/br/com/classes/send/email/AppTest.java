@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 
 public class AppTest {
 	
-	private String userName = "souzaconsuloria@gmail.com";
-	private String senha= "java@1985";
+	private String userName = "?"; //informar seu email remetente
+	private String senha= "?"; // informar sua senha
 	
 	//Anotação para executar o código
 	@org.junit.Test
@@ -38,13 +38,12 @@ public class AppTest {
 				}
 			});
 			
-			Address[] toUser = InternetAddress.parse("souza.elton28@gmail.com,souzaconsuloria@gmail.com");
-			//Address[] toUser = InternetAddress.parse("souzaconsuloria@gmail.com");
+			Address[] toUser = InternetAddress.parse("souza.elton28@gmail.com,souzaconsuloria@gmail.com"); // lista de emails destinatários
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(userName)); /*Quem está enviano*/
 			message.setRecipients(Message.RecipientType.TO, toUser);/*Email de destino*/
 			message.setSubject("Chegou e-mail enviado com java");/*Assunto do e-mail*/
-			message.setText("Olá programador, vc acaba de receber um e-mail enviado com Java do curso Formação Java Web do Alex");
+			message.setText("Olá programador, vc acaba de receber um e-mail enviado com Java do curso Formação Java Web");
 			
 			
 			Transport.send(message);
