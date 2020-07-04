@@ -1,7 +1,7 @@
 # send-mail
 Projeto desenvolvido durante o curso de formação Java Web - JDevTreinamento
 
-- Exemplos desenvolvidos no projeto Maven - Send-Mail
+Exemplos desenvolvidos no projeto Maven - Send-Mail
 
 - Configuração Java para envio de email com o servidor Gmail.
 - Configuração de propriedades para conexão.
